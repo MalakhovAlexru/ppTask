@@ -1,0 +1,15 @@
+version: '3'
+services:
+  main_db:
+    image: 'mongo'
+    container_name: 'ppMainDB'
+    env_file: .env
+    environment:
+      - MONGO_INITDB_DATABASE=$MONGO_DB
+      - MONGO_INITDB_ROOT_USERNAME=$MONGO_ROOT_USERNAME
+      - MONGO_INITDB_ROOT_PASSWORD=$MONGO_ROOT_PASSWORD
+    volumes:
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      - ./mongo-volume:/data/db
+    ports:
+      - '27017:27017'

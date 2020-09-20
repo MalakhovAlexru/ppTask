@@ -1,0 +1,36 @@
+{
+  "name": "pptask",
+  "version": "1.0.0",
+  "description": "Backend API for work with DB (MongoDB)",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon --inspect index.js",
+    "dev": "nodemon --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Node",
+    "Express",
+    "MySQL",
+    "MongoDB",
+    "JWT"
+  ],
+  "author": "Alex Malakhov <malakhovspb@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.2",
+    "mongoose-auto-increment": "^5.0.1",
+    "mongoose-sequence": "^5.2.2",
+    "node-fetch": "^2.6.1",
+    "xml-js": "^1.6.11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
