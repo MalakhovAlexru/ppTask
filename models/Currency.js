@@ -12,6 +12,7 @@ const schema = new Schema({
     type: Number,
     required: true,
   },
+  userId: [{ type: Types.ObjectId, ref: 'User' }],
 });
 
 module.exports = model('Currency', schema);

@@ -1,5 +1,4 @@
 const { Schema, model, Types } = require('mongoose');
-const AutoIncrement = require('mongoose-sequence')(require('mongoose'));
 
 const schema = new Schema({
   Id: {
@@ -25,6 +24,6 @@ const schema = new Schema({
     enum: ['income', 'expense'],
     required: true,
   },
-}).plugin(AutoIncrement, { inc_field: 'customTransId' });
+});
 
 module.exports = model('Transaction', schema);

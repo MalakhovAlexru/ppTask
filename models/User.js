@@ -1,11 +1,10 @@
 const { Schema, model, Types } = require('mongoose');
-const AutoIncrement = require('mongoose-sequence')(require('mongoose'));
 
 const schema = new Schema({
-  Id: {
-    type: Types.ObjectId,
-    unique: true,
-  },
+  // Id: {
+  //   type: Types.ObjectId,
+  //   // unique: true,
+  // },
   customUserId: {
     type: Number,
   },
@@ -24,6 +23,6 @@ const schema = new Schema({
   token: {
     type: String,
   },
-}).plugin(AutoIncrement, { inc_field: 'customUserId' });
+});
 
 module.exports = model('User', schema);
